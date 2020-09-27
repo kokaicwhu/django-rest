@@ -22,6 +22,11 @@ sudo apt install python3-venv
     pip install -r requirements.txt
     ```
 
+- Create a new django project
+    ```
+    docker-compose run app sh -c "django-admin.py startproject app ."
+    ```
+
 - Build app docker image
     ```
     docker build .
