@@ -27,7 +27,17 @@ sudo apt install python3-venv
     docker-compose run app sh -c "django-admin.py startproject app ."
     ```
 
+-- Create a new app called 'core' in a django project
+    ```
+    docker-compose run app sh -c "python manage.py startapp core"
+    ```
+
 - Build app docker image
     ```
     docker build .
+    ```
+
+- Run test cases
+    ```
+    docker-compose run app sh -c "python manage.py test && flake8"
     ```
