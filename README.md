@@ -39,7 +39,8 @@ sudo apt install python3-venv
 
 - Run test cases
     ```
-    docker-compose run app sh -c "python manage.py test && flake8"
+    docker-compose run app sh -c "python manage.py test"
+    docker-compose run app sh -c "python manage.py test && flake8 --ignore=W293"
     ```
 
 - Make migrations for `core` app
