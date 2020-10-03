@@ -41,3 +41,8 @@ sudo apt install python3-venv
     ```
     docker-compose run app sh -c "python manage.py test && flake8"
     ```
+
+- Make migrations for `core` app
+    ```
+    docker-compose run app sh -c "python manage.py makemigrations core"
+    ```
