@@ -47,3 +47,8 @@ sudo apt install python3-venv
     ```
     docker-compose run app sh -c "python manage.py makemigrations core"
     ```
+
+- Create a superuser
+    ```
+    docker-compose run app sh -c "python manage.py createsuperuser"
+    ```
