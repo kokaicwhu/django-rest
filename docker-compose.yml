@@ -27,3 +27,5 @@ services:
       - POSTGRES_DB=app_db
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=localpass
+    volumes: 
+      - ~/volumes/django-rest/pgdata:/var/lib/postgresql/data
