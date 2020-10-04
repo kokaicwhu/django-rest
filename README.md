@@ -24,12 +24,13 @@ sudo apt install python3-venv
 
 - Create a new django project
     ```
-    docker-compose run app sh -c "django-admin.py startproject app ."
+    docker-compose run --rm app sh -c "django-admin.py startproject app ."
     ```
 
--- Create a new app called 'core' in a django project
+-- Create apps in a django project
     ```
-    docker-compose run app sh -c "python manage.py startapp core"
+    docker-compose run --rm app sh -c "python manage.py startapp core"
+    docker-compose run --rm app sh -c "python manage.py startapp user"
     ```
 
 - Build app docker image
@@ -39,16 +40,16 @@ sudo apt install python3-venv
 
 - Run test cases
     ```
-    docker-compose run app sh -c "python manage.py test"
-    docker-compose run app sh -c "python manage.py test && flake8 --ignore=W293"
+    docker-compose run --rm app sh -c "python manage.py test"
+    docker-compose run --rm app sh -c "python manage.py test && flake8 --ignore=W293"
     ```
 
 - Make migrations for `core` app
     ```
-    docker-compose run app sh -c "python manage.py makemigrations core"
+    docker-compose run --rm app sh -c "python manage.py makemigrations core"
     ```
 
 - Create a superuser
     ```
-    docker-compose run app sh -c "python manage.py createsuperuser"
+    docker-compose run --rm app sh -c "python manage.py createsuperuser"
     ```
